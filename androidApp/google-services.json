@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "157073075386",
+    "project_id": "ur-drive-33a5a",
+    "storage_bucket": "ur-drive-33a5a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157073075386:android:04a28831f95f1e8e99a683",
+        "android_client_info": {
+          "package_name": "com.urdrive.clientapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFkgd-SUJXMyULATh2aJDDZ2dI2yyGlE8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

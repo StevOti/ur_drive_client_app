@@ -1,0 +1,31 @@
+rootProject.name = "ur_drive_client_app"
+
+pluginManagement {
+    repositories {
+        google {
+            mavenContent {
+                includeGroupAndSubgroups("androidx")
+                includeGroupAndSubgroups("com.android")
+                includeGroupAndSubgroups("com.google")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositories {
+        google {
+            mavenContent {
+                includeGroupAndSubgroups("androidx")
+                includeGroupAndSubgroups("com.android")
+                includeGroupAndSubgroups("com.google")
+            }
+        }
+        mavenCentral()
+    }
+}
+
+include(":androidApp")
+include(":shared")
