@@ -24,6 +24,7 @@ import com.urdrive.clientapp.domain.model.AddOnType
 import com.urdrive.clientapp.domain.model.ServiceItem
 import com.urdrive.clientapp.domain.model.Vehicle
 import com.urdrive.clientapp.presentation.auth.*
+import com.urdrive.clientapp.presentation.home.HomeScreen
 
 /**
  * Main application composable for Ur Drive Vehicle Management & Service Booking Platform.
@@ -120,7 +121,7 @@ fun App() {
                             isSignUpFlow = false,
                             onBackClick = { currentScreen = Screen.LOGIN },
                             onRedirectToLogin = { currentScreen = Screen.LOGIN },
-                            onRedirectToDashboard = { currentScreen = Screen.DASHBOARD }
+                            onRedirectToDashboard = { currentScreen = Screen.HOME }
                         )
                         // Post-OTP Sign Up Onboarding Wizard Steps
                         Screen.ONBOARDING_STEP_1 -> OnboardingStep1Screen(
@@ -145,9 +146,12 @@ fun App() {
                         )
                         Screen.TERMS_CONDITIONS -> TermsConditionsScreen(
                             onAgreeAndContinue = {
-                                currentScreen = Screen.LOGIN
+                                currentScreen = Screen.HOME
                             },
                             onDecline = { currentScreen = Screen.ONBOARDING_STEP_4 }
+                        )
+                        Screen.HOME -> HomeScreen(
+                            isDarkTheme = darkTheme
                         )
                         Screen.DASHBOARD -> DashboardScreen(
                             vehicle = selectedVehicle,
@@ -199,7 +203,7 @@ fun App() {
 enum class Screen {
     AUTH_INTRO, SIGN_UP, LOGIN, OTP_SIGNUP, OTP_LOGIN,
     ONBOARDING_STEP_1, ONBOARDING_STEP_2, ONBOARDING_STEP_3, ONBOARDING_STEP_4, TERMS_CONDITIONS,
-    DASHBOARD, GARAGE, SERVICE_CATALOG, CHECKOUT, SUCCESS
+    HOME, DASHBOARD, GARAGE, SERVICE_CATALOG, CHECKOUT, SUCCESS
 }
 
 @Composable
